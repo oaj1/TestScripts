@@ -1,0 +1,5 @@
+void OnJumpKeyReleased()
+{
+    if(velocityY < -6.0f)       // If character is still ascending in the jump
+        velocityY = -6.0f;      // Limit the speed of ascent
+}
