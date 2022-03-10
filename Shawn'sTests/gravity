@@ -1,0 +1,10 @@
+float positionX, positionY;     // Position of the character
+float velocityX, velocityY;     // Velocity of the character
+float gravity = 0.5f;           // How strong is gravity
+
+void Update(float time)
+{
+    positionX += velocityX * time;      // Apply horizontal velocity to X position
+    positionY += velocityY * time;      // Apply vertical velocity to X position
+    velocityY += gravity * time;        // Apply gravity to vertical velocity
+}
