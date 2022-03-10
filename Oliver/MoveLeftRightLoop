@@ -1,0 +1,25 @@
+using UnityEngine;
+using System.Collections;
+
+public class MoveLeftRightLoop : MonoBehaviour {
+
+public float detla = 1.5f; //amount to move left and right from the start point
+public float speed = 2.0f;
+private Vector3 startPos;
+
+
+Void Start (){
+
+  startPos = transform.position;
+
+}
+
+void Update (){
+
+  Vector3 v = startPos;
+  v.x += delta * Mathf.Sin (Time.time * speed);
+  transform.position = v;
+
+}
+
+}
