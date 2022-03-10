@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ColorChanger : MonoBehaviour
+{
+    // Start is called before the first frame update
+    SpriteRenderer sprite;
+    void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Blue
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            sprite.color = new Color(0, 0, 1, 1);
+        }
+        
+        // Turn Green
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            sprite.color = new Color(0, 1, 0, 1);
+        }
+        // Turn Red
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            sprite.color = new Color(1, 0, 0, 1);
+        }
+        // Turn Invisible
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            sprite.color = new Color(0, 1, 0, 0);
+        }
+        //Turn Visible (Red)
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            sprite.color = new Color(1, 0, 0, 1);
+        }
+    }
+}
